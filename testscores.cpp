@@ -5,12 +5,25 @@ class TestScores
 {
 private:
 	int * intptr = 0;
-	int array_size = 0;
-	intptr = new int[array_size];
+
+
 public:
-	TestScores(int, int, int)
+	TestScores(int);
+	~TestScores();
 };
-TestScores::TestScores(int test1, int test2, int test3)
+TestScores::TestScores(int size)
 {
-	intptr
+	intptr = new int [size];
+}
+
+TestScores::~TestScores()
+{
+	delete[] intptr;
+}
+int main()
+{
+	int  array_size = 0;
+	std::cout << "Enter how many test scores you have " << std::endl;
+	std::cin >> array_size;
+	return 0;
 }
