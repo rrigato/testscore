@@ -4,7 +4,7 @@
 class TestScores
 {
 private:
-	int * intptr = 0;
+	int * intptr;
 
 
 public:
@@ -13,6 +13,7 @@ public:
 	~TestScores(); // dealocates dynamically allocated memory
 	void set_tests(int, int); // mutator
 	int get_number_of_tests() const;
+	double get_average() const;
 };
 
 TestScores::TestScores()
@@ -33,10 +34,16 @@ TestScores::~TestScores()
 {
 	delete[] intptr;
 }
-TestScores::get_number_of_tests() const
+int TestScores::get_number_of_tests() const
 {
-
+	return 0;
 }
+
+double TestScores::get_average()const
+{
+	return 0;
+}
+
 int main()
 {
 	int  array_size = 0;
